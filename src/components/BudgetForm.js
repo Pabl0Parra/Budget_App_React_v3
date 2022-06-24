@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Checkbox from "./Checkboxes";
+import Panel from "./Panel";
 
 export default function BudgetForm(props) {
   return (
@@ -11,6 +12,12 @@ export default function BudgetForm(props) {
         id="webSite"
         label="A website (500 €)"
       />
+      {props.budgetFormData["webSite"] && (
+        <Panel
+          budgetFormData={props.budgetFormData}
+          addProduct={props.addProduct}
+        />
+      )}
       <Checkbox
         budgetFormData={props.budgetFormData}
         addProduct={props.addProduct}

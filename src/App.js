@@ -16,12 +16,15 @@ function App() {
     (budgetFormData.seo ? 300 : 0) +
     (budgetFormData.google ? 200 : 0);
 
-  function addProduct(id) {
+  function addProduct(data) {
+    const { type, name, value } = data;
+
     setBudgetFormData((prevFormData) => ({
       ...prevFormData,
-      [id]: !prevFormData[id],
+      [name]: type === "checkbox" ? !prevFormData[name] : value,
     }));
   }
+
   return (
     <div className="App">
       <h3> Which services do you require?</h3>
