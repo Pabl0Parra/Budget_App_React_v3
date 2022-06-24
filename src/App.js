@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import BudgetForm from "./components/BudgetForm";
-import "./App.css";
+// import "./App.css";
+import NumberFormat from "react-number-format";
 
 function App() {
   const [budgetFormData, setBudgetFormData] = useState(() => {
@@ -30,10 +31,10 @@ function App() {
   function addProduct(data) {
     const { type, name, value } = data;
 
-    if (type !== "checkbox" && value && !value.toString().match(/^[0-9 ]+$/))
+    if (type !== "checkbox" && value && !value.toString().match(/^0*[1-9]\d*$/))
       return;
 
-    if (parseInt(value) < 0) return;
+    if (parseInt(value) < 1) return;
 
     setBudgetFormData((prevFormData) => ({
       ...prevFormData,
@@ -50,7 +51,17 @@ function App() {
       <h3> Which services do you require?</h3>
       <BudgetForm budgetFormData={budgetFormData} addProduct={addProduct} />
       <p>
-        <strong>Total price: {totalCost} €</strong>
+        <strong>
+          Total price:
+          {/* component to format($1,200) number in an input  */}
+          <NumberFormat
+            value={totalCost}
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={"$"}
+            renderText={(value, props) => <div {...props}>{value}</div>}
+          />
+        </strong>
       </p>
     </div>
   );

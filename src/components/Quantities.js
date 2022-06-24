@@ -1,14 +1,14 @@
 export default function Quantity(props) {
-  function changeInput(arithmeticOp) {
+  function handleOnChange(variation) {
     props.addProduct({
       type: "text",
       name: props.id,
-      value: parseInt(props.budgetFormData[props.id]) + arithmeticOp,
+      value: parseInt(props.budgetFormData[props.id]) + variation,
     });
   }
   return (
     <div className="quantity">
-      <button onClick={() => changeInput(1)}>+</button>
+      <button onClick={() => handleOnChange(1)}>+</button>
       <input
         type="text"
         onChange={(event) => props.addProduct(event.target)}
@@ -16,7 +16,7 @@ export default function Quantity(props) {
         name={props.id}
         value={props.budgetFormData[props.id]}
       />
-      <button onClick={() => changeInput(-1)}>-</button>
+      <button onClick={() => handleOnChange(-1)}>-</button>
     </div>
   );
 }
