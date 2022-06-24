@@ -11,13 +11,20 @@ function App() {
     languages: 1,
   });
 
-  const calculatedTotal =
-    (budgetFormData.webSite ? 500 : 0) +
+  const totalCost =
+    (budgetFormData.webSite
+      ? 500 + budgetFormData.languages * budgetFormData.pages * 30
+      : 0) +
     (budgetFormData.seo ? 300 : 0) +
     (budgetFormData.google ? 200 : 0);
 
   function addProduct(data) {
     const { type, name, value } = data;
+
+    if (type !== "checkbox" && value && !value.toString().match(/^[0-9 ]+$/))
+      return;
+
+    if (parseInt(value) < 0) return;
 
     setBudgetFormData((prevFormData) => ({
       ...prevFormData,
@@ -30,7 +37,7 @@ function App() {
       <h3> Which services do you require?</h3>
       <BudgetForm budgetFormData={budgetFormData} addProduct={addProduct} />
       <p>
-        <strong>Total price: {calculatedTotal} €</strong>
+        <strong>Total price: {totalCost} €</strong>
       </p>
     </div>
   );
