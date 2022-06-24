@@ -6,6 +6,9 @@ export default function Home() {
       {/*!--Content before waves--*/}
       <div className="inner-header flex">
         <h1>Let's create your next budget</h1>
+        <div>
+          <p>Press BudgetApp to start working on your next budget</p>
+        </div>
       </div>
       {/*--Waves Container-*/}
       <div>

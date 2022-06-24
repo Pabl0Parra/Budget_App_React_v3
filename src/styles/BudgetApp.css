@@ -1,0 +1,23 @@
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  min-height: 78vh;
+}
+
+.create-budget {
+  border-right: solid 1px grey;
+  min-height: 78.5vh;
+  width: 50%;
+  padding: 2rem;
+  background-color: #3fc1c9;
+}
+
+h3 {
+  font-size: 22px;
+}
+.retrieve-budget {
+  width: 50%;
+  padding: 2rem;
+  background-color: #fc5185;
+}

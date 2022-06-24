@@ -5,14 +5,10 @@ const NavBar = () => (
   <nav className="nav">
     <ul>
       <li>
-        <NavLink clasName="nav-link" to="/">
-          Home
-        </NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink clasName="nav-link" to="/BudgetApp">
-          BudgetApp
-        </NavLink>
+        <NavLink to="/BudgetApp">BudgetApp</NavLink>
       </li>
     </ul>
   </nav>

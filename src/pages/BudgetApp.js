@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import NumberFormat from "react-number-format";
 import BudgetForm from "../components/BudgetForm";
+import "../styles/BudgetApp.css";
 
 function BudgetApp(props) {
   const [budgetFormData, setBudgetFormData] = useState(() => {
@@ -45,25 +46,30 @@ function BudgetApp(props) {
   }, [budgetFormData]);
 
   return (
-    <div className="App">
-      <h3> Which services do you require?</h3>
-      <BudgetForm
-        className="test"
-        budgetFormData={budgetFormData}
-        addProduct={addProduct}
-      />
-      <div className="price-section">
-        <strong>
-          Total price:
-          {/* component to format number in an input  */}
-          <NumberFormat
-            value={totalCost}
-            displayType={"text"}
-            thousandSeparator={true}
-            prefix={"$"}
-            renderText={(value, props) => <div {...props}>{value}</div>}
-          />
-        </strong>
+    <div className="row grid">
+      <div className="column create-budget">
+        <h3> Which services do you require?</h3>
+        <BudgetForm
+          className="test"
+          budgetFormData={budgetFormData}
+          addProduct={addProduct}
+        />
+        <div className="price-section">
+          <strong>
+            Total price:
+            {/* component to format number in an input  */}
+            <NumberFormat
+              value={totalCost}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+              renderText={(value, props) => <div {...props}>{value}</div>}
+            />
+          </strong>
+        </div>
+      </div>
+      <div className="column retrieve-budget">
+        <h1>TESTING TEMPLATE</h1>
       </div>
     </div>
   );
