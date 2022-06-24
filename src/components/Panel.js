@@ -11,12 +11,14 @@ function Panel(props) {
           addProduct={props.addProduct}
         />
       </div>
-      Number of languages:{" "}
-      <Quantity
-        id="languages"
-        budgetFormData={props.budgetFormData}
-        addProduct={props.addProduct}
-      />
+      <div>
+        Number of languages:
+        <Quantity
+          id="languages"
+          budgetFormData={props.budgetFormData}
+          addProduct={props.addProduct}
+        />
+      </div>
     </div>
   );
 }
