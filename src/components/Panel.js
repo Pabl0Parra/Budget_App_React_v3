@@ -3,7 +3,7 @@ import Popup from "./Popup";
 import { useState } from "react";
 
 function Panel(props) {
-  const [buttonPopup, setButtonPopup] = useState(false);
+  const [showInfo1, setShowInfo1] = useState(false);
 
   return (
     <div className="panel">
@@ -15,8 +15,13 @@ function Panel(props) {
           addProduct={props.addProduct}
         />
       </div>
-      <button onClick={() => setButtonPopup(true)}>Popup</button>
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+      <button onClick={() => setShowInfo1(true)}>Popup</button>
+      <Popup
+        show={showInfo1}
+        onClickOutside={() => {
+          setShowInfo1(false);
+        }}
+      >
         <h3>Please, enter the number of webpages you will need</h3>
       </Popup>
       <div>
@@ -27,8 +32,13 @@ function Panel(props) {
           addProduct={props.addProduct}
         />
       </div>
-      <button onClick={() => setButtonPopup(true)}>Popup</button>
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+      <button onClick={() => setShowInfo1(true)}>Popup</button>
+      <Popup
+        show={showInfo1}
+        onClickOutside={() => {
+          setShowInfo1(false);
+        }}
+      >
         <h3>Please, enter the number of languages your site will need</h3>
       </Popup>
     </div>
