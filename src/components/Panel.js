@@ -15,7 +15,8 @@ function Panel(props) {
           addProduct={props.addProduct}
         />
       </div>
-      <button onClick={() => setShowInfo1(true)}>Popup</button>
+      <button className="info-btn" onClick={() => setShowInfo1(true)} />
+
       <Popup
         show={showInfo1}
         onClickOutside={() => {
@@ -32,7 +33,7 @@ function Panel(props) {
           addProduct={props.addProduct}
         />
       </div>
-      <button onClick={() => setShowInfo1(true)}>Popup</button>
+      <button class="info-btn" onClick={() => setShowInfo1(true)} />
       <Popup
         show={showInfo1}
         onClickOutside={() => {

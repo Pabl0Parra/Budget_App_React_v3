@@ -3,6 +3,7 @@ body {
   font-family: "Caveat", cursive, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: larger;
 }
 
 code {

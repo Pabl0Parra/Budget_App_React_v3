@@ -22,7 +22,8 @@ function Popup(props) {
   return (
     <div ref={ref} className="popup-box">
       <div className="popup-inner">
-        Click anywhere outside of this box to exit this screen
+        <p>Please, enter a number</p>
+        <p>Click anywhere outside of this box to exit this screen</p>
         {/* {props.message} */}
       </div>
     </div>
