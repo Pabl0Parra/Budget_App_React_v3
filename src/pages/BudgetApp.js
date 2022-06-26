@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import NumberFormat from "react-number-format";
 import BudgetForm from "../components/BudgetForm";
+import UserInfo from "../components/UserInfo";
 import "../styles/BudgetApp.css";
 
 function BudgetApp(props) {
@@ -55,18 +56,20 @@ function BudgetApp(props) {
           addProduct={addProduct}
         />
         <div className="price-section">
-          <strong>
-            Total price:
-            {/* component to format number in an input  */}
-            <NumberFormat
-              value={totalCost}
-              displayType={"text"}
-              thousandSeparator={true}
-              prefix={"$"}
-              renderText={(value, props) => <div {...props}>{value}</div>}
-            />
-          </strong>
+          <label htmlFor="NumberFormat">Total price:</label>
+
+          {/* component to format number in an input  */}
+          <NumberFormat
+            id="NumberFormat"
+            value={totalCost}
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={"$"}
+            renderText={(value, props) => <div {...props}>{value}</div>}
+          />
         </div>
+        <hr />
+        <UserInfo />
       </div>
       <div className="column retrieve-budget">
         <h1>TESTING TEMPLATE</h1>

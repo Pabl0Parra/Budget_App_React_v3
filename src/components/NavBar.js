@@ -4,6 +4,7 @@ import "../styles/NavBar.css";
 const NavBar = () => (
   <nav className="nav">
     <ul>
+      <img className="nav-logo" src={require("../assets/logo.png")} alt="" />
       <li>
         <NavLink to="/">Home</NavLink>
       </li>

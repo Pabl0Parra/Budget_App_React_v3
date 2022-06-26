@@ -1,9 +1,10 @@
 import Quantity from "./Quantities";
 import Popup from "./Popup";
 import { useState } from "react";
+import { FaInfoCircle } from "react-icons/fa";
 
 function Panel(props) {
-  const [showInfo1, setShowInfo1] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
   return (
     <div className="panel">
@@ -15,16 +16,14 @@ function Panel(props) {
           addProduct={props.addProduct}
         />
       </div>
-      <button className="info-btn" onClick={() => setShowInfo1(true)} />
+      <button className="info-btn" onClick={() => setShowInfo(true)}></button>
 
       <Popup
-        show={showInfo1}
+        show={showInfo}
         onClickOutside={() => {
-          setShowInfo1(false);
+          setShowInfo(false);
         }}
-      >
-        <h3>Please, enter the number of webpages you will need</h3>
-      </Popup>
+      ></Popup>
       <div>
         Languages:
         <Quantity
@@ -33,15 +32,15 @@ function Panel(props) {
           addProduct={props.addProduct}
         />
       </div>
-      <button class="info-btn" onClick={() => setShowInfo1(true)} />
+      <button className="info-btn" onClick={() => setShowInfo(true)}>
+        {FaInfoCircle}
+      </button>
       <Popup
-        show={showInfo1}
+        show={showInfo}
         onClickOutside={() => {
-          setShowInfo1(false);
+          setShowInfo(false);
         }}
-      >
-        <h3>Please, enter the number of languages your site will need</h3>
-      </Popup>
+      ></Popup>
     </div>
   );
 }

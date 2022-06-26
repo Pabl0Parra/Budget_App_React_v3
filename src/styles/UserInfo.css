@@ -1,0 +1,53 @@
+.user-info {
+  display: grid;
+  grid-template: 30px 30px / 1fr 1fr;
+  gap: 17px;
+  padding: 1rem;
+}
+
+.user-input {
+  font-family: "Caveat", cursive, sans-serif !important;
+  font-size: 16px;
+  font-weight: 600;
+  text-indent: 6px;
+  border: none;
+  background-color: #2a747f;
+  color: black;
+  border-radius: 6px;
+}
+
+.user-btn {
+  grid-column: 1 / -1;
+  font-family: "Caveat", cursive, sans-serif !important;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: #2a747f;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.user-btn:hover {
+  background-color: #4c98a4;
+}
+
+::placeholder {
+  color: rgb(154, 140, 140);
+}
+
+h4 {
+  margin: 0 !important;
+}
+
+hr {
+  border-top: 1px solid black;
+  border-bottom: transparent;
+  margin-block-start: 0.1rem;
+}
+
+img {
+  position: relative;
+  height: 44px;
+  width: 44px;
+  align-self: center;
+}
