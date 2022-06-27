@@ -2,6 +2,7 @@ export default function Checkbox(props) {
   return (
     <div className="check">
       <input
+        className="check"
         type="checkbox"
         id={props.id}
         name={props.id}
