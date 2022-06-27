@@ -1,7 +1,7 @@
 .user-info {
   display: grid;
   grid-template: 30px 30px / 1fr 1fr;
-  gap: 17px;
+  gap: 28px;
   padding: 1rem;
 }
 
@@ -36,7 +36,7 @@
 }
 
 h4 {
-  margin: 0 !important;
+  margin: 30px auto !important;
 }
 
 hr {
@@ -47,7 +47,7 @@ hr {
 
 img {
   position: relative;
-  height: 44px;
-  width: 44px;
+  height: 20px;
+  width: 20px;
   align-self: center;
 }

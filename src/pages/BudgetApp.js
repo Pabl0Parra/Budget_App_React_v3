@@ -30,7 +30,7 @@ function BudgetApp(props) {
   function addProduct(data) {
     const { type, name, value } = data;
 
-    if (type !== "checkbox" && value && !value.toString().match(/^0*[1-9]\d*$/))
+    if (type === "number" && value && !value.toString().match(/^0*[1-9]\d*$/))
       return;
 
     if (parseInt(value) < 1) return;
