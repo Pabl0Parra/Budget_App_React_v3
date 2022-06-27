@@ -1,10 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import NumberFormat from "react-number-format";
 import BudgetForm from "../components/BudgetForm";
-import UserInfo from "../components/UserInfo";
+import "../styles/UserInfo.css";
+
 import "../styles/BudgetApp.css";
 
 function BudgetApp(props) {
+  const [budgetList, setBudgetList] = useState([]);
+
+  const [savedBudget, setSavedBudget] = useState();
+
   const [budgetFormData, setBudgetFormData] = useState(() => {
     // getting stored value
     const saved = localStorage.getItem("budgetFormData");
@@ -16,6 +21,8 @@ function BudgetApp(props) {
         google: false,
         pages: 1,
         languages: 1,
+        budgetName: "",
+        userName: "",
       }
     );
   });
@@ -46,15 +53,16 @@ function BudgetApp(props) {
     localStorage.setItem("budgetFormData", JSON.stringify(budgetFormData));
   }, [budgetFormData]);
 
+  function createUserBudget(data) {
+    setBudgetList((prevList) => [...prevList, { ...data, date: new Date() }]);
+    setSavedBudget(0);
+  }
+  console.log(budgetFormData);
   return (
     <div className="row grid">
       <div className="column create-budget">
         <h3> Which services do you require?</h3>
-        <BudgetForm
-          className="test"
-          budgetFormData={budgetFormData}
-          addProduct={addProduct}
-        />
+        <BudgetForm budgetFormData={budgetFormData} addProduct={addProduct} />
         <div className="price-section">
           <label htmlFor="NumberFormat">Total price:</label>
 
@@ -69,7 +77,30 @@ function BudgetApp(props) {
           />
         </div>
         <hr />
-        <UserInfo />
+        <Fragment>
+          <h4>Please, enter the following to create your budget:</h4>
+          <div className="user-info">
+            <input
+              className="user-input"
+              type="text"
+              name="budgetName"
+              placeholder="Enter a budget name"
+              value={budgetFormData["userBudget"]}
+              onChange={(event) => addProduct(event.target)}
+            ></input>
+            <input
+              className="user-input"
+              type="text"
+              name="userName"
+              placeholder="Enter your name"
+              value={budgetFormData["userName"]}
+              onChange={(event) => addProduct(event.target)}
+            ></input>
+            <button className="user-btn" onClick={createUserBudget}>
+              Create budget
+            </button>
+          </div>
+        </Fragment>
       </div>
       <div className="column retrieve-budget">
         <h1>TESTING TEMPLATE</h1>
