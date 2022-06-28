@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Quantity from "./Quantities";
 import Popup from "./Popup";
-// import info from "../assets/info.png";
+import info from "../assets/info.png";
 
 function Panel(props) {
   const [showInfo, setShowInfo] = useState(false);
@@ -17,7 +17,7 @@ function Panel(props) {
         />
       </div>
       <button className="info-btn" onClick={() => setShowInfo(true)}>
-        <img className="info-icon" src="../assets/info.png" alt="" />
+        <img className="info-icon" src={info} alt="" />
       </button>
 
       <Popup
@@ -35,7 +35,7 @@ function Panel(props) {
         />
       </div>
       <button className="info-btn" onClick={() => setShowInfo(true)}>
-        <img className="info-icon" src="../assets/info.png" alt="" />
+        <img className="info-icon" src={info} alt="" />
       </button>
       <Popup
         show={showInfo}
