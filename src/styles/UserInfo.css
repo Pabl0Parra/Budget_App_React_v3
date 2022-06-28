@@ -38,16 +38,3 @@
 h4 {
   margin: 30px auto !important;
 }
-
-hr {
-  border-top: 1px solid black;
-  border-bottom: transparent;
-  margin-block-start: 0.1rem;
-}
-
-img {
-  position: relative;
-  height: 16px;
-  width: 16px;
-  align-self: center;
-}
