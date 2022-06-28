@@ -4,6 +4,7 @@ import BudgetForm from "../components/BudgetForm";
 import "../styles/UserInfo.css";
 
 import "../styles/BudgetApp.css";
+import { BudgetList } from "../components/BudgetList";
 
 function BudgetApp(props) {
   const [budgetList, setBudgetList] = useState([]);
@@ -53,11 +54,18 @@ function BudgetApp(props) {
     localStorage.setItem("budgetFormData", JSON.stringify(budgetFormData));
   }, [budgetFormData]);
 
-  function createUserBudget(data) {
-    setBudgetList((prevList) => [...prevList, { ...data, date: new Date() }]);
+  function createUserBudget(totalCost) {
+    setBudgetList((prevList) => [
+      ...prevList,
+      {
+        ...budgetFormData,
+        date: new Date().toUTCString(),
+        price: totalCost,
+      },
+    ]);
     setSavedBudget(0);
   }
-  console.log(budgetFormData);
+  console.log(budgetList);
   return (
     <div className="row grid">
       <div className="column create-budget">
@@ -96,14 +104,17 @@ function BudgetApp(props) {
               value={budgetFormData["userName"]}
               onChange={(event) => addProduct(event.target)}
             ></input>
-            <button className="user-btn" onClick={createUserBudget}>
+            <button
+              className="user-btn"
+              onClick={() => createUserBudget(totalCost)}
+            >
               Create budget
             </button>
           </div>
         </Fragment>
       </div>
       <div className="column retrieve-budget">
-        <h1>TESTING TEMPLATE</h1>
+        <BudgetList budgetList={budgetList} />
       </div>
     </div>
   );
