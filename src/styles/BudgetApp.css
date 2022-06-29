@@ -100,7 +100,23 @@ h3 {
   width: 14px !important;
 }
 
-.sort-navbar {
-  height: 30px;
-  background-color: #016170;
+.budget-price {
+  display: inline;
+  margin-left: 2%;
+}
+
+.sorting-navbar {
+  background: pink;
+  grid-column-start: 2;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
+}
+
+
+
+
+.sorted-btn {
+  height: 20px;
+  width: 60px;
 }

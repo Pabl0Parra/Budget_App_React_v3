@@ -10,7 +10,7 @@ export default function BudgetForm(props) {
         budgetFormData={props.budgetFormData}
         addProduct={props.addProduct}
         id="webSite"
-        label="A website (500 €)"
+        label="A website ( $500 )"
       />
       {props.budgetFormData["webSite"] && (
         <Panel
@@ -23,14 +23,14 @@ export default function BudgetForm(props) {
         budgetFormData={props.budgetFormData}
         addProduct={props.addProduct}
         id="seo"
-        label="A SEO consultancy (300 €)"
+        label="A SEO consultancy ( $300 )"
       />
 
       <Checkbox
         budgetFormData={props.budgetFormData}
         addProduct={props.addProduct}
         id="google"
-        label="A Google Ads campaign (200 €)"
+        label="A Google Ads campaign ( $200 )"
       />
     </Fragment>
   );

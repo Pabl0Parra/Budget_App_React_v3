@@ -1,4 +1,4 @@
-import "../styles/BudgetCard.css";
+import "../styles/BudgetList.css";
 import NumberFormat from "react-number-format";
 
 export const BudgetList = (props) => {
@@ -26,6 +26,7 @@ export const BudgetList = (props) => {
           <span>
             Total price =
             <NumberFormat
+              className="budgetList-price"
               id="NumberFormat"
               value={budget.price}
               displayType={"text"}

@@ -4,7 +4,6 @@ import BudgetForm from "../components/BudgetForm";
 import "../styles/UserInfo.css";
 import "../styles/BudgetApp.css";
 import { BudgetList } from "../components/BudgetList";
-import SortedBudgetsNav from "../components/BudgetSorted";
 
 function BudgetApp(props) {
   const [budgetList, setBudgetList] = useState([]);
@@ -49,6 +48,32 @@ function BudgetApp(props) {
     }));
   }
 
+  function SortABC() {
+    let newSortedList = [...budgetList];
+    newSortedList.sort((a, b) =>
+      a.budgetName.toLowerCase() > b.budgetName.toLowerCase() ? 1 : -1
+    );
+
+    setBudgetList(newSortedList);
+  }
+
+  function SortByDate() {
+    let newBudgetList = [...budgetList];
+    newBudgetList.sort((a, b) =>
+      a.date.toLowerCase() > b.date.toLowerCase() ? 1 : -1
+    );
+
+    setBudgetList(newBudgetList);
+  }
+
+  function Restart() {
+    setBudgetList((prev) => (prev = budgetList));
+  }
+  // updating card´s order
+  useEffect(() => {
+    setBudgetList([...budgetList]);
+  }, [budgetList]);
+
   // saving current choices into localStorage
   useEffect(() => {
     localStorage.setItem("budgetFormData", JSON.stringify(budgetFormData));
@@ -65,7 +90,7 @@ function BudgetApp(props) {
     ]);
     setSavedBudget(0);
   }
-  console.log(budgetList);
+
   return (
     <div className="row grid">
       <div className="column create-budget">
@@ -76,6 +101,7 @@ function BudgetApp(props) {
 
           {/* component to format number in an input  */}
           <NumberFormat
+            className="budget-price"
             id="NumberFormat"
             value={totalCost}
             displayType={"text"}
@@ -114,7 +140,17 @@ function BudgetApp(props) {
         </Fragment>
       </div>
       <div className="column retrieve-budget">
-        <SortedBudgetsNav />
+        <div className="sorting-navbar">
+          <button className="sorted-btn" onClick={SortABC}>
+            Sort alphabetically
+          </button>
+          <button className="sorted-btn" onClick={SortByDate}>
+            Sort by creation date
+          </button>
+          <button className="sorted-btn" onClick={Restart}>
+            Restart sorting
+          </button>
+        </div>
         <BudgetList budgetList={budgetList} />
       </div>
     </div>
