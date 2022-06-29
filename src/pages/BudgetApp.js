@@ -164,8 +164,9 @@ function BudgetApp(props) {
           </button>
           <div className="sorted-btn bg">
             <input
+              className="search"
               type="text"
-              placeholder="Enter Budget Name..."
+              placeholder="Enter Budget Title..."
               value={searchTitle}
               onChange={(event) => setSearchTitle(event.target.value)}
             ></input>

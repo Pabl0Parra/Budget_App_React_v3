@@ -73,7 +73,6 @@ h3 {
 }
 
 .quantity input {
-  font-family: "Caveat", cursive, sans-serif;
   font-weight: 400;
   font-size: 24px;
   text-align: center;
@@ -159,4 +158,10 @@ h3 {
 
 .bg:hover {
   background-color: #2a747f;
+}
+
+.search {
+  font-family: "Syne", cursive, sans-serif;
+  color: #2a747f;
+  font-size: 16px;
 }
