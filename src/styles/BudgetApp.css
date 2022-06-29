@@ -1,3 +1,12 @@
+body {
+  margin: 0;
+  font-family: "Syne", cursive, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: larger;
+  letter-spacing: 1px;
+}
+
 .grid {
   display: flex;
   justify-content: space-between;
@@ -16,12 +25,10 @@
 
 .retrieve-budget {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   width: 50%;
-  padding: 2rem;
+
   background-color: #009393;
+  flex-direction: column;
 }
 
 h3 {
@@ -38,13 +45,11 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   border: none;
   border-radius: 1rem;
   text-align: center;
-  padding: 0.4rem;
-  margin-left: 5rem;
-  padding-left: 3rem;
-  max-width: 400px;
+  max-width: 100vw;
   background: #2a747f;
 }
 
@@ -60,11 +65,11 @@ h3 {
   color: snow;
   cursor: pointer;
   margin: 0 1rem;
-  font-family: "Caveat", cursive, sans-serif !important;
 }
 
 .quantity button:hover {
-  background-color: #1c9a63;
+  background-color: #6ec5c5;
+  color: yellow;
 }
 
 .quantity input {
@@ -74,18 +79,19 @@ h3 {
   text-align: center;
   padding: 1rem;
   border: none;
-  max-width: 40px;
+  max-width: 100px;
   background: #2a747f;
   color: snow;
 }
 
 .check {
-  padding: 2rem;
+  padding: 1rem;
+  margin-right: 2%;
 }
 
 .info-btn {
   background-color: #2a747f;
-  border: 0;
+  border: none;
   border-radius: 3px;
   margin-top: 14px !important;
   padding: 4px 6px;
@@ -106,17 +112,51 @@ h3 {
 }
 
 .sorting-navbar {
-  background: pink;
-  grid-column-start: 2;
-  grid-column-end: five;
-  grid-row-start: row1-start;
-  grid-row-end: 3;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: max-content;
+  height: 69px;
+  background-color: #2a747f;
+  box-shadow: 0 4px 30px #000;
+  top: 0;
 }
 
-
-
-
 .sorted-btn {
-  height: 20px;
-  width: 60px;
+  font-family: Syne;
+  height: 40px;
+  width: 100px;
+  margin-left: 5%;
+  background-color: #009393;
+  border: 0;
+  border-radius: 3px;
+  padding: 4px 4px;
+  cursor: pointer;
+  color: snow;
+}
+
+.sorted-btn:hover {
+  background-color: #6ec5c5;
+  color: yellow;
+}
+
+/* .search {
+  text-align: left;
+  margin-left: 10rem;
+  margin-top: 0.4rem;
+  width: 8rem;
+  padding-left: 10px;
+} */
+
+.bg {
+  margin-top: 2%;
+  background-color: #2a747f;
+  margin-left: 1%;
+}
+
+.bg:hover {
+  background-color: #2a747f;
 }

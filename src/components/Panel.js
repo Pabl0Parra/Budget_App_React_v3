@@ -9,7 +9,7 @@ function Panel(props) {
   return (
     <div className="panel">
       <div>
-        Webpages:
+        Number of webpages:
         <Quantity
           id="pages"
           budgetFormData={props.budgetFormData}
@@ -27,7 +27,7 @@ function Panel(props) {
         }}
       ></Popup>
       <div>
-        Languages:
+        Number of languages:
         <Quantity
           id="languages"
           budgetFormData={props.budgetFormData}

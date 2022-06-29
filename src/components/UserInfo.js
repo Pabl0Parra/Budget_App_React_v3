@@ -13,7 +13,7 @@ export default function UserInfo(props) {
           onChange={(event) => props.addProduct(event.target)}
           type="text"
           name="budgetName"
-          placeholder="Enter a name for your budget"
+          placeholder="Enter a name for your budget..."
         ></input>
 
         <input
@@ -22,7 +22,7 @@ export default function UserInfo(props) {
           onChange={(event) => props.addProduct(event.target)}
           type="text"
           name="userName"
-          placeholder="Enter your name"
+          placeholder="Enter your name..."
         ></input>
         <button
           className="user-btn"

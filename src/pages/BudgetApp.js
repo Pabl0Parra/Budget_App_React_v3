@@ -10,6 +10,8 @@ function BudgetApp(props) {
 
   const [savedBudget, setSavedBudget] = useState();
 
+  const [searchTitle, setSearchTitle] = useState("");
+
   const [budgetFormData, setBudgetFormData] = useState(() => {
     // getting stored value
     const saved = localStorage.getItem("budgetFormData");
@@ -48,22 +50,34 @@ function BudgetApp(props) {
     }));
   }
 
+  function createUserBudget(totalCost) {
+    setBudgetList((prevList) => [
+      {
+        ...budgetFormData,
+        date: new Date().toUTCString(),
+        price: totalCost,
+      },
+      ...prevList,
+    ]);
+    setSavedBudget(0);
+  }
+
   function SortABC() {
-    let newSortedList = [...budgetList];
-    newSortedList.sort((a, b) =>
+    const byABCList = [...budgetList];
+    byABCList.sort((a, b) =>
       a.budgetName.toLowerCase() > b.budgetName.toLowerCase() ? 1 : -1
     );
 
-    setBudgetList(newSortedList);
+    setBudgetList(byABCList);
   }
 
   function SortByDate() {
-    let newBudgetList = [...budgetList];
-    newBudgetList.sort((a, b) =>
+    const byDateList = [...budgetList];
+    byDateList.sort((a, b) =>
       a.date.toLowerCase() > b.date.toLowerCase() ? 1 : -1
     );
 
-    setBudgetList(newBudgetList);
+    setBudgetList(byDateList);
   }
 
   function Restart() {
@@ -79,18 +93,13 @@ function BudgetApp(props) {
     localStorage.setItem("budgetFormData", JSON.stringify(budgetFormData));
   }, [budgetFormData]);
 
-  function createUserBudget(totalCost) {
-    setBudgetList((prevList) => [
-      ...prevList,
-      {
-        ...budgetFormData,
-        date: new Date().toUTCString(),
-        price: totalCost,
-      },
-    ]);
-    setSavedBudget(0);
+  function SearchByTitle() {
+    const byTitleList = [...budgetList];
+    setBudgetList(
+      (prev) =>
+        (prev = byTitleList.filter((item) => item.budgetName === searchTitle))
+    );
   }
-
   return (
     <div className="row grid">
       <div className="column create-budget">
@@ -150,6 +159,17 @@ function BudgetApp(props) {
           <button className="sorted-btn" onClick={Restart}>
             Restart sorting
           </button>
+          <button className="sorted-btn" onClick={SearchByTitle}>
+            Search Title
+          </button>
+          <div className="sorted-btn bg">
+            <input
+              type="text"
+              placeholder="Enter Budget Name..."
+              value={searchTitle}
+              onChange={(event) => setSearchTitle(event.target.value)}
+            ></input>
+          </div>
         </div>
         <BudgetList budgetList={budgetList} />
       </div>

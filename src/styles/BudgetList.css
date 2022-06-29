@@ -1,19 +1,16 @@
-
-
-.card-wrapper {
+.card {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column !important;
   width: 140px;
   height: 180px;
   box-shadow: 8px 8px 60px #016170;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 10px;
   font-size: 14px;
   background-color: #016170;
-  margin: 5 rem;
-  padding: 1rem;
-  margin-bottom: 6%;
-  color: rgb(210, 195, 30);
+  padding: 2rem;
+  margin: 6% 2%;
+  color: snow;
 }
 
 hr {
@@ -29,4 +26,3 @@ hr {
 .budgetList-price {
   display: inline;
 }
-
