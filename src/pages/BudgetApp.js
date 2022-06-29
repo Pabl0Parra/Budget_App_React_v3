@@ -2,9 +2,9 @@ import { useState, useEffect, Fragment } from "react";
 import NumberFormat from "react-number-format";
 import BudgetForm from "../components/BudgetForm";
 import "../styles/UserInfo.css";
-
 import "../styles/BudgetApp.css";
 import { BudgetList } from "../components/BudgetList";
+import SortedBudgetsNav from "../components/BudgetSorted";
 
 function BudgetApp(props) {
   const [budgetList, setBudgetList] = useState([]);
@@ -114,6 +114,7 @@ function BudgetApp(props) {
         </Fragment>
       </div>
       <div className="column retrieve-budget">
+        <SortedBudgetsNav />
         <BudgetList budgetList={budgetList} />
       </div>
     </div>

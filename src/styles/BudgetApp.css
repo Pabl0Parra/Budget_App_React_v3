@@ -99,3 +99,8 @@ h3 {
   height: 14px !important;
   width: 14px !important;
 }
+
+.sort-navbar {
+  height: 30px;
+  background-color: #016170;
+}
