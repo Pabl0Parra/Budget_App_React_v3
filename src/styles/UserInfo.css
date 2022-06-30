@@ -21,7 +21,7 @@
   font-size: 20px;
   font-weight: 400;
   color: snow;
-
+  border:none;
   background-color: #2a747f;
   border-radius: 6px;
   cursor: pointer;
@@ -29,6 +29,7 @@
 
 .user-btn:hover {
   background-color: #4c98a4;
+  color: yellow;
 }
 
 ::placeholder {

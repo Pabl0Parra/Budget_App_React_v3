@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  flex-flow: column !important;
+  flex-flow: row wrap;
   width: 140px;
   height: 180px;
   box-shadow: 8px 8px 60px #016170;

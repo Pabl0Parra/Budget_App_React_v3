@@ -24,9 +24,8 @@ body {
 }
 
 .retrieve-budget {
-  display: flex;
+  display: flex;  
   width: 50%;
-
   background-color: #009393;
   flex-direction: column;
 }
@@ -164,4 +163,11 @@ h3 {
   font-family: "Syne", cursive, sans-serif;
   color: #2a747f;
   font-size: 16px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }

@@ -81,17 +81,13 @@ function BudgetApp(props) {
   }
 
   function Restart() {
-    setBudgetList((prev) => (prev = budgetList));
-  }
-  // updating card´s order
-  useEffect(() => {
-    setBudgetList([...budgetList]);
-  }, [budgetList]);
+    const byDateList = [...budgetList];
+    byDateList.sort((a, b) =>
+      a.date.toLowerCase() < b.date.toLowerCase() ? -1 : 1
+    );
 
-  // saving current choices into localStorage
-  useEffect(() => {
-    localStorage.setItem("budgetFormData", JSON.stringify(budgetFormData));
-  }, [budgetFormData]);
+    setBudgetList(byDateList);
+  }
 
   function SearchByTitle() {
     const byTitleList = [...budgetList];
@@ -100,6 +96,11 @@ function BudgetApp(props) {
         (prev = byTitleList.filter((item) => item.budgetName === searchTitle))
     );
   }
+  // saving current choices into localStorage
+  useEffect(() => {
+    localStorage.setItem("budgetFormData", JSON.stringify(budgetFormData));
+  }, [budgetFormData]);
+
   return (
     <div className="row grid">
       <div className="column create-budget">
@@ -172,7 +173,9 @@ function BudgetApp(props) {
             ></input>
           </div>
         </div>
-        <BudgetList budgetList={budgetList} />
+        <div className="card-wrapper">
+          <BudgetList budgetList={budgetList} />
+        </div>
       </div>
     </div>
   );
