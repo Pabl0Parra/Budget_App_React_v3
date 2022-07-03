@@ -119,12 +119,14 @@ function BudgetApp(props) {
   }
 
   useEffect(() => {
-    // saving current choices into localStorage
+    // saving current form choices into localStorage
     localStorage.setItem("budgetFormData", JSON.stringify(budgetFormData));
+    // saving actual budgets into localStorage
     localStorage.setItem("budgetList", JSON.stringify(budgetList));
   }, [budgetFormData, budgetList]);
 
   useEffect(() => {
+    // setting current form selections into url
     setSearchParams(budgetFormData);
   }, [budgetFormData, setSearchParams]);
 
@@ -179,16 +181,16 @@ function BudgetApp(props) {
       <div className="column retrieve-budget">
         <div className="sorting-navbar">
           <button className="sorted-btn" onClick={SortABC}>
-            Sort alphabetically
+            Sort ABC
           </button>
           <button className="sorted-btn" onClick={SortByDate}>
-            Sort by creation date
+            Sort by date
           </button>
           <button className="sorted-btn" onClick={Restart}>
             Restart sorting
           </button>
           <button className="sorted-btn" onClick={SearchByTitle}>
-            Search Title
+            Search title
           </button>
           <div className="sorted-btn bg">
             <input

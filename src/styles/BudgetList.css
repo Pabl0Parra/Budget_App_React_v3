@@ -2,11 +2,11 @@
   display: flex;
   flex-flow: row wrap;
   width: 140px;
-  height: 180px;
+  height: 200px;
   box-shadow: 8px 8px 60px #016170;
   justify-content: space-evenly;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 13px;
   background-color: #016170;
   padding: 2rem;
   margin: 6% 2%;
