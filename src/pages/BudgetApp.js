@@ -6,7 +6,19 @@ import "../styles/BudgetApp.css";
 import { BudgetList } from "../components/BudgetList";
 
 function BudgetApp(props) {
-  const [budgetList, setBudgetList] = useState([]);
+  const [budgetList, setBudgetList] = useState(() => {
+    const initialValue = [];
+
+    try {
+      const item = localStorage.getItem("budgetList");
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      return initialValue;
+    }
+  });
+  useEffect(() => {
+    localStorage.setItem("budgetList", JSON.stringify(budgetList));
+  }, [budgetList]);
 
   const [savedBudget, setSavedBudget] = useState();
 
