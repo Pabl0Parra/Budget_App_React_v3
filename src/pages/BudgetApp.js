@@ -1,9 +1,10 @@
 import { useState, useEffect, Fragment } from "react";
+import { useSearchParams } from "react-router-dom";
 import NumberFormat from "react-number-format";
 import BudgetForm from "../components/BudgetForm";
+import { BudgetList } from "../components/BudgetList";
 import "../styles/UserInfo.css";
 import "../styles/BudgetApp.css";
-import { BudgetList } from "../components/BudgetList";
 
 function BudgetApp(props) {
   const [budgetList, setBudgetList] = useState(() => {
@@ -22,6 +23,8 @@ function BudgetApp(props) {
 
   const [savedBudget, setSavedBudget] = useState();
 
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [searchTitle, setSearchTitle] = useState("");
 
   const [budgetFormData, setBudgetFormData] = useState(() => {
@@ -30,13 +33,19 @@ function BudgetApp(props) {
     const initialValue = JSON.parse(saved);
     return (
       initialValue || {
-        webSite: false,
-        seo: false,
-        google: false,
-        pages: 1,
-        languages: 1,
-        budgetName: "",
-        userName: "",
+        webSite: searchParams.get("webSite") === "true" ? true : false,
+        seo: searchParams.get("seo") === "true" ? true : false,
+        google: searchParams.get("google") === "true" ? true : false,
+        pages: searchParams.get("pages") ? searchParams.get("pages") : 1,
+        languages: searchParams.get("languages")
+          ? searchParams.get("languages")
+          : 1,
+        budgetName: searchParams.get("budgetName")
+          ? searchParams.get("budgetName")
+          : "",
+        userName: searchParams.get("userName")
+          ? searchParams.get("userName")
+          : "",
       }
     );
   });
@@ -108,10 +117,16 @@ function BudgetApp(props) {
         (prev = byTitleList.filter((item) => item.budgetName === searchTitle))
     );
   }
-  // saving current choices into localStorage
+
   useEffect(() => {
+    // saving current choices into localStorage
     localStorage.setItem("budgetFormData", JSON.stringify(budgetFormData));
-  }, [budgetFormData]);
+    localStorage.setItem("budgetList", JSON.stringify(budgetList));
+  }, [budgetFormData, budgetList]);
+
+  useEffect(() => {
+    setSearchParams(budgetFormData);
+  }, [budgetFormData, setSearchParams]);
 
   return (
     <div className="row grid">
