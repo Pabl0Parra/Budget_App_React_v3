@@ -165,10 +165,7 @@ function BudgetApp() {
               value={budgetFormData["userName"]}
               onChange={(event) => addProduct(event.target)}
             ></input>
-            <button
-              className="user-btn"
-              onClick={() => createUserBudget(totalCost)}
-            >
+            <button className="user-btn" onClick={() => createUserBudget()}>
               Create budget
             </button>
           </div>
