@@ -1,30 +1,32 @@
 # **Project Preview**
 
-## ![screen recording](https://github.com/Pabl0Parra/TUTORIAL-APP-REACT/blob/solutions/public/assets/screen-recording.gif)
+## ![tree diagram](https://github.com/Pabl0Parra/Budget_App_React_v3/blob/solutions/src/assets/project_preview.gif)
 
 ---
 
+## **Project Tree Diagram**
+
+![tree diagram](./src/assets/project_tree.svg)
+
 ## :wrench: **Tech used in this project**
 
-In this project I´m using React JS to develop a tutorial in which, with two buttons, new users can move forward and backward through the tips, modifying the help text and background image every time either button is clicked.
-I will also implement a welcome screen with a button to begin the tutorial.
-Since I don´t yet have the proper documentation or an API, I will hardcore some example data to reproduce the desire output.
+In this project I´m using React JS to develop an app that will allow the user to create a budget & save it for later use, adding more interactions with the user than in the previous practices (check boxes, inputs, buttons). This web will have to react and modify the total price depending on the options chosen by the user.
+It also allows the user to create multiple budgets & sort them by name, date of creation & to search for an specific budget title.
 
 ---
 
 ## :mortar_board: **What did I learn from this project**
 
-Through this project I have been able to learn the basics of React, create and implement my first reusable components, make use of props, how to work with styled-components, learn how to implement useState & how to use conditional rendering to display different screens.
+Through this project I have been able to continue learning the basics of React, create and implement more reusable components, make use of props, work with styled-components, keep practicing with useState & how to use conditional rendering to display different screens.
+I was able to learn about localStorage since I had to implement it in order to save the budget form data and the budget list that the user can create by saving the budgets. It also gave me more practice with React routes & filters & search engines on listings.
 
 ---
 
 ## :memo: **What do I still need to do**
 
-~~1. Concentrate all styles under one js file through style-components~~
+1. Apply styled-components.
 
-~~2. Get rid of unnecesary files & images~~
-
-3. Make sure welcome screen renders by itself.
+2. Refactor the code better.
 
 ---
 
@@ -39,7 +41,3 @@ Please, visit the following link for instructions on how to start it: [create-re
 ## :bookmark_tabs: **Instructions**
 
 ---
-
-### **_Level 1_** :star2:
-
-#### :paw_prints: **Step 1**
