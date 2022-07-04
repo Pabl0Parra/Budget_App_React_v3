@@ -2,7 +2,7 @@ import "../styles/BudgetList.css";
 import NumberFormat from "react-number-format";
 
 export const BudgetList = (props) => {
-  const Card = props.budgetList.map((budget, i) => (
+  return props.budgetList.map((budget, i) => (
     <div className="budget-list card" key={i}>
       <div className="card-title">
         <span>Budget title: {budget.budgetName}</span>
@@ -43,6 +43,4 @@ export const BudgetList = (props) => {
       </div>
     </div>
   ));
-
-  return Card;
 };

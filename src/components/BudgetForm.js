@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Checkbox from "./Checkboxes";
+import Checkbox from "./Checkbox";
 import Panel from "./Panel";
 
 export default function BudgetForm(props) {

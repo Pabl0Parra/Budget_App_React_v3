@@ -24,7 +24,6 @@ function Popup(props) {
       <div className="popup-inner">
         <p>Please, enter a number</p>
         <p>Click anywhere outside of this box to exit this screen</p>
-        {/* {props.message} */}
       </div>
     </div>
   );

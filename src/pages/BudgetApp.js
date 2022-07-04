@@ -6,7 +6,7 @@ import { BudgetList } from "../components/BudgetList";
 import "../styles/UserInfo.css";
 import "../styles/BudgetApp.css";
 
-function BudgetApp(props) {
+function BudgetApp() {
   const [budgetList, setBudgetList] = useState(() => {
     const initialValue = [];
 
@@ -69,7 +69,7 @@ function BudgetApp(props) {
     }));
   }
 
-  function createUserBudget(totalCost) {
+  function createUserBudget() {
     setBudgetList((prevList) => [
       {
         ...budgetFormData,

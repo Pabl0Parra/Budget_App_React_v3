@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Quantity from "./Quantities";
+import Quantity from "./Quantity";
 import Popup from "./Popup";
 import info from "../assets/info.png";
 
