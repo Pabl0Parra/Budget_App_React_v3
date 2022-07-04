@@ -21,8 +21,6 @@ function BudgetApp(props) {
     localStorage.setItem("budgetList", JSON.stringify(budgetList));
   }, [budgetList]);
 
-  const [savedBudget, setSavedBudget] = useState();
-
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [searchTitle, setSearchTitle] = useState("");
@@ -80,7 +78,6 @@ function BudgetApp(props) {
       },
       ...prevList,
     ]);
-    setSavedBudget(0);
   }
 
   function SortABC() {
@@ -112,9 +109,8 @@ function BudgetApp(props) {
 
   function SearchByTitle() {
     const byTitleList = [...budgetList];
-    setBudgetList(
-      (prev) =>
-        (prev = byTitleList.filter((item) => item.budgetName === searchTitle))
+    setBudgetList(() =>
+      byTitleList.filter((item) => item.budgetName === searchTitle)
     );
   }
 
