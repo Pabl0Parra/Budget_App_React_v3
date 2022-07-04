@@ -20,7 +20,7 @@ It also allows the user to create multiple budgets & sort them by name, date of 
 ## :mortar_board: **What did I learn from this project**
 
 Through this project I have been able to continue learning the basics of React, create and implement more reusable components, make use of props, work with styled-components, keep practicing with useState & how to use conditional rendering to display different screens.
-I was able to learn about localStorage since I had to implement it in order to save the budget form data and the budget list that the user can create by saving the budgets. It also gave me more practice with React routes & filters & search engines on listings.
+I was able to learn about localStorage since I had to implement it in order to save the budget form data and the budget list that the user can create by saving the budgets. It also gave me more time to practice with React routes & filters or search engines on listings.
 
 ---
 
