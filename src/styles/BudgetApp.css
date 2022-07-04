@@ -50,6 +50,7 @@ h3 {
   text-align: center;
   max-width: 100vw;
   background: #2a747f;
+  transition: all 0.3s ease-in-out;
 }
 
 .quantity {
@@ -93,7 +94,7 @@ h3 {
   border-radius: 3px;
   margin-top: 14px !important;
   padding: 4px 6px;
-  
+
   cursor: help;
   height: 20px;
   width: 20px;

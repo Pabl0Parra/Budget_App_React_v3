@@ -21,6 +21,8 @@ function BudgetApp() {
     localStorage.setItem("budgetList", JSON.stringify(budgetList));
   }, [budgetList]);
 
+  const [savedBudget, setSavedBudget] = useState();
+
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [searchTitle, setSearchTitle] = useState("");
@@ -78,6 +80,7 @@ function BudgetApp() {
       },
       ...prevList,
     ]);
+    setSavedBudget(0);
   }
 
   function SortABC() {
@@ -109,9 +112,17 @@ function BudgetApp() {
 
   function SearchByTitle() {
     const byTitleList = [...budgetList];
-    setBudgetList(() =>
-      byTitleList.filter((item) => item.budgetName === searchTitle)
-    );
+
+    if (searchTitle !== "") {
+      setBudgetList(() =>
+        byTitleList.filter(
+          (item) =>
+            item.budgetName.toLowerCase() === searchTitle.toLocaleLowerCase()
+        )
+      );
+    } else {
+      if (searchTitle === "") alert("Please enter a budget title");
+    }
   }
 
   useEffect(() => {
@@ -192,6 +203,7 @@ function BudgetApp() {
               placeholder="Enter Budget Title..."
               value={searchTitle}
               onChange={(event) => setSearchTitle(event.target.value)}
+              required
             ></input>
           </div>
         </div>
