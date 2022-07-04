@@ -142,9 +142,8 @@ h3 {
 }
 
 .bg {
-  margin-top: 2%;
+  align-self: flex-end;
   background-color: #2a747f;
-  margin-left: 1%;
 }
 
 .bg:hover {
