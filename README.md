@@ -6,6 +6,8 @@
 
 ## **Project Tree Diagram**
 
+[project interactive map](https://app.codesee.io/maps/public/06cb5fa0-fb80-11ec-90ae-fb854673a899)
+
 ![tree diagram](./src/assets/project_tree.svg)
 
 ## :wrench: **Tech used in this project**
