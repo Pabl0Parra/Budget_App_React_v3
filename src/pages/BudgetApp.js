@@ -21,7 +21,7 @@ function BudgetApp() {
     localStorage.setItem("budgetList", JSON.stringify(budgetList));
   }, [budgetList]);
 
-  const [savedBudget, setSavedBudget] = useState();
+  const [setSavedBudget] = useState();
 
   const [searchParams, setSearchParams] = useSearchParams();
 
