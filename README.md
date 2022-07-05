@@ -30,6 +30,8 @@ I was able to learn about localStorage since I had to implement it in order to s
 
 2. Refactor the code better.
 
+3. Make it responsive.
+
 ---
 
 ## :seedling: **Getting Started with this project**
