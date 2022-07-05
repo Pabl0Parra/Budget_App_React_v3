@@ -21,7 +21,7 @@ function BudgetApp() {
     localStorage.setItem("budgetList", JSON.stringify(budgetList));
   }, [budgetList]);
 
-  const [setSavedBudget] = useState();
+  const [savedBudget, setSavedBudget] = useState();
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -201,12 +201,12 @@ function BudgetApp() {
           </button>
           <div className="sorted-btn bg">
             <input
+              name="searchTitleName"
               className="search"
               type="text"
               placeholder="Enter Budget Title..."
               value={searchTitle}
               onChange={(event) => setSearchTitle(event.target.value)}
-              required
             ></input>
           </div>
         </div>
