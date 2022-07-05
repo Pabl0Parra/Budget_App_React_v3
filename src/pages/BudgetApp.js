@@ -72,6 +72,9 @@ function BudgetApp() {
   }
 
   function createUserBudget() {
+    if (budgetFormData.budgetName === "" || budgetFormData.userName === "") {
+      return;
+    }
     setBudgetList((prevList) => [
       {
         ...budgetFormData,
