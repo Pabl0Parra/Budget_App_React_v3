@@ -21,8 +21,6 @@ function BudgetApp() {
     localStorage.setItem("budgetList", JSON.stringify(budgetList));
   }, [budgetList]);
 
-  const [savedBudget, setSavedBudget] = useState();
-
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [searchTitle, setSearchTitle] = useState("");
@@ -83,7 +81,6 @@ function BudgetApp() {
       },
       ...prevList,
     ]);
-    setSavedBudget(0);
   }
 
   function SortABC() {
