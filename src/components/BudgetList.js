@@ -32,7 +32,7 @@ export const BudgetList = (props) => {
               displayType={"text"}
               thousandSeparator={true}
               prefix={"$"}
-              renderText={(value, props) => <div {...props}>{value}</div>}
+              renderText={(value, money) => <div {...money}>{value}</div>}
             />
           </span>
           <hr></hr>
