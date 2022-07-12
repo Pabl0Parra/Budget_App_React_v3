@@ -1,72 +1,49 @@
-# Getting Started with Create React App
+# **Project Preview**
+
+## ![tree diagram](https://github.com/Pabl0Parra/Budget_App_React_v3/blob/solutions/src/assets/project_preview.gif)
+
+---
+
+## **Project Tree Diagram**
+
+[project interactive map](https://app.codesee.io/maps/public/06cb5fa0-fb80-11ec-90ae-fb854673a899)
+
+![tree diagram](./src/assets/project_tree.svg)
+
+## :wrench: **Tech used in this project**
+
+In this project I´m using React JS to develop a web app that will allow the user to create a budget & save it for later use, adding more interactions with the user than in the previous practices (check boxes, inputs, buttons). This web app will have to react and modify the total price depending on the options chosen by the user.
+It also allows the user to create multiple budgets & sort them by name, date of creation & to search for an specific budget title.
+
+---
+
+## :mortar_board: **What did I learn from this project**
+
+Through this project I have been able to continue learning the basics of React, create and implement more reusable components, make use of props, work with styled-components, keep practicing with useState, useEffect & how to use conditional rendering to display different screens.
+I was able to learn about localStorage since I had to implement it in order to save the budget form data and the budget list that the user can create by saving the budgets. It also gave the oportunity to learn about React routes, as well as the implementation of the useSearchParams hook in order to be able to share the actual URL of the budget the user created.
+
+---
+
+## :memo: **What do I still need to do**
+
+1. Validate fields.
+
+2. Apply styled-components.
+
+3. Refactor the code better.
+
+4. Make it responsive.
+
+---
+
+## :seedling: **Getting Started with this project**
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Please, visit the following link for instructions on how to start it: [create-react-app](https://create-react-app.dev/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## :bookmark_tabs: **Instructions**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# budget_v3_React" 
-"# Budget_App_React_v3" 
+---

@@ -1,0 +1,41 @@
+.user-info {
+  display: grid;
+  grid-template: 30px 30px / 1fr 1fr;
+  gap: 28px;
+}
+
+.user-input {
+  font-family: "Syne", cursive, sans-serif !important;
+  font-size: 16px;
+  font-weight: 600;
+  text-indent: 6px;
+  border: none;
+  background-color: snow;
+  color: #2a747f;
+  border-radius: 6px;
+}
+
+.user-btn {
+  grid-column: 1 / -1;
+  font-family: "Syne", cursive, sans-serif !important;
+  font-size: 20px;
+  font-weight: 400;
+  color: snow;
+  border:none;
+  background-color: #2a747f;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.user-btn:hover {
+  background-color: #4c98a4;
+  color: yellow;
+}
+
+::placeholder {
+  color: rgb(154, 140, 140);
+}
+
+h4 {
+  margin: 30px auto !important;
+}
