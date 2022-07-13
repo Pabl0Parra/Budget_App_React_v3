@@ -1,6 +1,10 @@
 # **Project Preview**
 
+<<<<<<< HEAD
 ## ![tree diagram](src/assets/project_preview.gif)
+=======
+## ![project gif](https://github.com/Pabl0Parra/Budget_App_React_v3/blob/solutions/src/assets/project_preview.gif)
+>>>>>>> 056b5ba8c0a13d71a917b6a5ed89c1973207a071
 
 ---
 
