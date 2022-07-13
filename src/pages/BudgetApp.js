@@ -116,12 +116,11 @@ function BudgetApp() {
     if (searchTitle !== "") {
       setBudgetList(() =>
         byTitleList.filter(
-          (item) =>
-            item.budgetName.toLowerCase() === searchTitle.toLocaleLowerCase()
+          (item) => item.budgetName.toLowerCase() === searchTitle.toLowerCase()
         )
       );
     } else {
-      if (searchTitle === "") alert("Please enter a budget title");
+      alert("Please enter a budget title");
     }
   }
 
