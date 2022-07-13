@@ -6,7 +6,7 @@
 
 ## **Project Tree Diagram**
 
-[project interactive map](https://app.codesee.io/maps/8c8ded60-fb80-11ec-804c-0f4dc38e2b97)
+[Click here for an interactive diagram of this project](https://app.codesee.io/maps/8c8ded60-fb80-11ec-804c-0f4dc38e2b97)
 
 ![tree diagram](./src/assets/project_tree.svg)
 
