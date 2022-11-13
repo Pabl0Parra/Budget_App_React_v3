@@ -1,3 +1,4 @@
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=Pabl0Parra_Budget_App_React_v3)
 # **Project Preview**
 
 
